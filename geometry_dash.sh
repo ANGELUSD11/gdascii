@@ -1,4 +1,3 @@
-
 ESC=$'\033'
 RESET="${ESC}[0m"
 CYAN="${ESC}[96m"
@@ -195,11 +194,10 @@ while :; do
         idx=$(( (spin / 2) % 4 ))
         draw_cube "$center" "$h" "$idx"
 
-        # Título, lienzo y pie
-        printf '%s[H   %s%s★  G E O M E T R Y   D A S H  ★%s\n' \
+        printf '%s[H   %s%s★  gdascii  ★%s\n' \
             "$ESC" "$BOLD" "$CYAN" "$RESET"
         render
-        printf '   %sCtrl+C para salir%s' "$GRAY" "$RESET"
+        printf '   %sCtrl+C to exit%s' "$GRAY" "$RESET"
 
         sleep "$FRAME_DELAY"
     done
